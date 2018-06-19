@@ -1,6 +1,6 @@
 <?php
 
-include("dbConnection.php");
+include("_inc/dbConnection.php");
 $sql = "SELECT * FROM `my_user`";
 $result = mysqli_query($conn,$sql) or die("Error ".mysqli_error($sql));
 mysqli_close($conn);
