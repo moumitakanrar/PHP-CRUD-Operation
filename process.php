@@ -6,7 +6,7 @@ $email = $_POST["email_id"];
 $phNo = $_POST["ph_no"];
 $country = $_POST["country"];
 
-include("dbConnection.php");
+include("_inc/dbConnection.php");
 $sql = "INSERT INTO `my_user`( `name`, `email`, `phone_no`, `country`) VALUES ('$name','$email','$phNo','$country')";
 
 $result = mysqli_query($conn,$sql) or die("Error: ".mysqli_error($conn));
@@ -40,7 +40,7 @@ $email = $_POST["email_id"];
 $phNo = $_POST["ph_no"];
 $country = $_POST["country"];
 
-include("dbConnection.php");
+include("_inc/dbConnection.php");
 $sql = "UPDATE `my_user` SET `name`='$name',`email`='$email',`phone_no`='$phNo',`country`='$country' WHERE id='$id'";
 
 $result = mysqli_query($conn,$sql) or die("Error: ".mysqli_error($conn));
